@@ -14,5 +14,6 @@ app.use(express.urlencoded({extended: false}))
 app.use(errorHandler)
 
 app.use('/api/times', require('./routes/timeRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
