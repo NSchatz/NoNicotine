@@ -37,8 +37,9 @@ function TimeFormProfile({jack}){
         object.time = time
         console.log(object)
         dispatch(updateTime({object}))
-        // navigate('/login')
+        // 
         window.location.reload();
+        // navigate('/login')
     } 
     const [time, setTime] = useState(object.time.slice(0, -8))
     return(
