@@ -23,7 +23,7 @@ function TimeFormProfile({jack}){
     const navigate = useNavigate()
     
     const onSubmit = e => {
-        // e.preventDefault()
+        e.preventDefault()
         
         console.log(object)
         console.log(jack.user)
@@ -37,7 +37,8 @@ function TimeFormProfile({jack}){
         object.time = time
         console.log(object)
         dispatch(updateTime({object}))
-        navigate('/login')
+        // navigate('/login')
+        window.location.reload();
     } 
     const [time, setTime] = useState(object.time.slice(0, -8))
     return(
