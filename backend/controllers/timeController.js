@@ -21,7 +21,8 @@ const setTime = asyncHandler(async (req, res) => {
     
     const time = await Time.create({
         time: req.body.time,
-        user: req.user.id
+        user: req.user.id,
+        cost: req.user.cost
     }) 
     res.status(200).json(time)
 })
@@ -32,15 +33,15 @@ const setTime = asyncHandler(async (req, res) => {
 const updateTime = asyncHandler(async (req, res) => {
 
     const time = await Time.findById(req.params.id)
-
+    console.log(time)
     if(!time){
         res.status(400)
         throw new Error('Nothing with that ID')
     }
 
-    const User = await User.findById(req.user.id)
-
-    if(!User){
+    const user = await User.findById(req.user.id)
+    console.log(user)
+    if(!user){
         res.status(401)
         throw new Error('User not found')
     }
@@ -50,8 +51,8 @@ const updateTime = asyncHandler(async (req, res) => {
         throw new Error('User not authorized')
     }
 
-    const updatedTime = await Time.findByIdAndUpdate(req.params.id, req.body, {new:true})
-
+    const updatedTime = await Time.findByIdAndUpdate(req.params.id, req.body)
+    console.log(req.body)
     res.status(200).json(updatedTime)
 })
 
@@ -66,9 +67,9 @@ const deleteTime = asyncHandler(async (req, res) => {
         throw new Error('Nothing with that ID')
     }
 
-    const User = await User.findById(req.user.id)
+    const user = await User.findById(req.user.id)
 
-    if(!User){
+    if(!user){
         res.status(401)
         throw new Error('User not found')
     }

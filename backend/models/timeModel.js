@@ -11,6 +11,9 @@ const timeSchema = mongoose.Schema({
         type: Date,
         required: [true, 'Please select a date']
     },
+    cost: {
+        type: Number
+    }
 }, {
     timestamps: true,
 })

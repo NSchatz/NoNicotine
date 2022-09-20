@@ -11,21 +11,29 @@ function Header() {
     const onLogout = () => {
         dispatch(logout())
         dispatch(reset())
-        navigate('/')
+        navigate('/login')
     }
 
     return (
         <header className='header'>
             <div className='logo'>
-                <Link to='/'>TimeSetter</Link>
+                <Link to='/'>Addiction Quitter</Link>
             </div>
             <ul>
                 {user ? (
-                    <li>
-                        <button className='btn' onClick={onLogout}>
-                            <FaSignOutAlt /> Logout
-                        </button>
-                    </li>
+                    <>
+                        <li>
+                            <button className='btn' onClick={onLogout}>
+                                <FaSignOutAlt /> Logout
+                            </button>
+                        </li>
+                        <li>
+                            <Link to='/profile'>
+                                <FaUser /> Profile
+                            </Link>
+                         </li>
+                    </>
+                    
                 ) : (
                 <>
                     <li>
