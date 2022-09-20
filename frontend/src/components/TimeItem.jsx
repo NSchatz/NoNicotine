@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-import { useDispatch } from 'react-redux'
-
 export var ProgressBar =  ({width, percent}) => {
   
   const [value, setValue] = useState(0);

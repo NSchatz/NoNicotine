@@ -53,7 +53,7 @@ function Dashboard() {
       <section className='content'>
         {time.length > 0 ? (
           <div className='time'>
-            {time.map((time, index) => (
+            {time.slice(0,1).map((time, index) => (
               <TimeItem key={index} time={time} />
             ))}
           </div>
