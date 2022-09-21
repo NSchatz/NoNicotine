@@ -4,11 +4,8 @@ import { createTime } from '../features/times/timeSlice'
 
 function TimeForm(){
     const [time, setTime] = useState()
-    // const onChange => {
     console.log(time)
-    // }
     const dispatch = useDispatch()
-
     const onSubmit = e => {
         e.preventDefault()
         
@@ -22,7 +19,6 @@ function TimeForm(){
                     <label htmlFor="text">Time</label>
                     <input type="datetime-local" name='Date' id='Date' value={time} onChange={(e) => setTime(e.target.value)} />
                 </div>
-                {/* <input className="btn btn-block" type='submit' label='setQuitTime' /> */}
                 <button className="btn btn-block" type='submit'>Set Quit Time</button>
             </form>
         </section>

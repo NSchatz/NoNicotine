@@ -9,11 +9,13 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
+  background-color: black;
+  color: white;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: white;
 }
 
 p {
@@ -48,7 +50,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid white;
   margin-bottom: 60px;
 }
 
@@ -68,7 +70,7 @@ h3 {
 }
 
 .header ul li a:hover {
-  color: #777;
+  color: rgb(127, 127, 127);
 }
 
 .header ul li a svg {
@@ -83,7 +85,7 @@ h3 {
 }
 
 .heading p {
-  color: #828282;
+  color: #ffffff;
 }
 
 .goals {
@@ -93,7 +95,7 @@ h3 {
 }
 
 .goal {
-  background-color: #f4f4f4;
+  background-color: #0e0d0d;
   margin: 10px 0;
   padding: 20px 0 10px;
   position: relative;
@@ -137,7 +139,7 @@ h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   background: #000;
   color: #fff;
@@ -175,7 +177,7 @@ h3 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 5000;
   display: flex;
   justify-content: center;
@@ -220,7 +222,7 @@ h3 {
 }
 
 .progress {
-  background-color: rgb(0, 89, 255);
+  background-color: rgb(255, 0, 0);
   height: 30px;
   border-radius: .5rem;
 }

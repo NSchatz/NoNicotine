@@ -15,9 +15,11 @@ function Dashboard() {
   const {user} = useSelector((state) => state.auth)
   const {time, isLoading, isError, message} = useSelector((state) => state.time)
   
+  console.log(time)
+  if (!time.hasOwnProperty("cost")) {
+    const costIs = false
+  }
   
-  // const dateObj = new Date()
-  // console.log(dateObj.getMonth())
   useEffect(() => {
     if(isError){
       console.log(message)
@@ -33,16 +35,11 @@ function Dashboard() {
     }
   }, [user, navigate, isError, message, dispatch])
 
-  const keys = Object.keys(time)
-  const final = time[keys[0]]
-  // console.log(final['time'])
   if(isLoading){
     return(
       <Spinner/>
     )
   }
-
-  
 
   return (
     <>
@@ -63,7 +60,16 @@ function Dashboard() {
       </section>
       <section className='content'>
           <div className="cost">
-            
+            {time.hasOwnProperty("cost") ? (
+              <div className='time'>
+              {time.slice(0,1).map((time, index) => (
+                // <CostItem key={index} time={time} />
+                <></>
+              ))}
+            </div>
+            ) : (
+              <CostFormProfile jack={time} />
+            )}
           </div>
       </section>
     </>

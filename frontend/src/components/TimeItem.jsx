@@ -49,7 +49,6 @@ function TimeItem({ time }) {
   var sec = minremain / 1000
   var secremain = minremain % 1000
   const secpercent = sec/60
-  // console.log(daypercent)
 
   return (
     <>
