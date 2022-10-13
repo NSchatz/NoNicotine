@@ -8,12 +8,14 @@ function CostFormProfile({jack}){
         {"_id":jack._id,
         "user":jack.user,
         'time': jack.time,
-        'cost' : jack.cost ? 'cost': null,
+        'cost' : jack.cost,
         "createdAt":jack.createdAt,
         "updatedAt":jack.updatedAt,
         "__v":jack.__v})
     // var mason = object.time.slice(0, -8)
       console.log(jack[0])
+      console.log(jack.user)
+      const [cost, setCost] = useState(0)
     const dispatch = useDispatch()
     const navigate = useNavigate()
     
@@ -27,7 +29,7 @@ function CostFormProfile({jack}){
         // window.location.reload();
         // navigate('/login')
     } 
-    const [cost, setCost] = useState(object.cost)
+    
     console.log(cost)
     return(
         <section className="form">

@@ -58,20 +58,6 @@ function Dashboard() {
           <TimeForm />
         )}
       </section>
-      <section className='content'>
-          <div className="cost">
-            {time.hasOwnProperty("cost") ? (
-              <div className='time'>
-              {time.slice(0,1).map((time, index) => (
-                // <CostItem key={index} time={time} />
-                <></>
-              ))}
-            </div>
-            ) : (
-              <CostFormProfile jack={time} />
-            )}
-          </div>
-      </section>
     </>
   )
 }

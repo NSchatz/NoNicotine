@@ -31,28 +31,22 @@ const setTime = asyncHandler(async (req, res) => {
 // @route PUT /api/Times
 // @access PRIVATE
 const updateTime = asyncHandler(async (req, res) => {
-
     const time = await Time.findById(req.params.id)
-    console.log(time)
     if(!time){
         res.status(400)
         throw new Error('Nothing with that ID')
     }
-
     const user = await User.findById(req.user.id)
     console.log(user)
     if(!user){
         res.status(401)
         throw new Error('User not found')
     }
-
     if(time.user.toString() !== user.id) {
         res.status(401)
         throw new Error('User not authorized')
     }
-
     const updatedTime = await Time.findByIdAndUpdate(req.params.id, req.body)
-    console.log(req.body)
     res.status(200).json(updatedTime)
 })
 
