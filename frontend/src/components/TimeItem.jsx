@@ -56,46 +56,46 @@ function TimeItem({ time }) {
             {Math.floor(month) > 0 ? 
               <>
                 <p>{Math.floor(month)} months</p>
-                <ProgressBar width={600} percent={monthpercent}  />
+                <ProgressBar width={644} percent={monthpercent}  />
               </> : null
             }
             {Math.floor(day) > 0 ? 
               <>
                 <p>{Math.floor(day)} days</p>
-                <ProgressBar width={600} percent={daypercent}  />
+                <ProgressBar width={644} percent={daypercent}  />
               </> : null
             }
             {Math.floor(hour) > 0 ? 
               <>
                 <p>{Math.floor(hour)} hours</p>
-                <ProgressBar width={600} percent={hourpercent}  />
+                <ProgressBar width={644} percent={hourpercent}  />
               </> 
               :
               <>
                 <p>{Math.floor(hour)} hours</p>
-                <ProgressBar width={600} percent={0}  />
+                <ProgressBar width={644} percent={0}  />
               </> 
             }
             {Math.floor(min) > 0 ? 
               <>
                 <p>{Math.floor(min)} mins</p>
-                <ProgressBar width={600} percent={minpercent}  />
+                <ProgressBar width={644} percent={minpercent}  />
               </> 
               :
               <>
                 <p>{Math.floor(min)} mins</p>
-                <ProgressBar width={600} percent={0}  />
+                <ProgressBar width={644} percent={0}  />
             </> 
             }
             {Math.floor(sec) > 0 ? 
               <>
                 <p>{Math.floor(sec)} secs</p>
-                <ProgressBar width={600} percent={secpercent}  />
+                <ProgressBar width={644} percent={secpercent}  />
               </> 
               :
               <>
                 <p>{Math.floor(sec)} secs</p>
-                <ProgressBar width={600} percent={0}  />
+                <ProgressBar width={644} percent={0}  />
               </>
             }
         </div>
